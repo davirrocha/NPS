@@ -1,0 +1,308 @@
+:root {
+    --navy: #0D1B2A;
+    --blue: #1D4D7A;
+    --orange: #F28C28;
+    --gray: #F4F6F9;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--navy);
+
+    background: linear-gradient(180deg,
+            #FFFFFF 0%,
+            #F4F6F9 100%);
+
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 50px;
+
+    background: var(--white);
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.container img {
+    width: 10%;
+    position: relative;
+    bottom: 30px;
+    right: 25px;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.header h1 {
+    color: var(--navy);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.header p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* QUESTIONS */
+
+.question {
+    margin-bottom: 35px;
+}
+
+.question h3 {
+    color: var(--navy);
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* NPS RATING */
+
+.rating {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 8px;
+}
+
+.rating button {
+    height: 48px;
+
+    border: 2px solid #D1D5DB;
+    border-radius: 10px;
+
+    background: var(--white);
+    color: var(--navy);
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.rating button:hover {
+    border-color: var(--orange);
+    background: #FFF5EA;
+    transform: translateY(-3px);
+}
+
+.rating button.active {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* LABELS */
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+
+    color: #777;
+    font-size: .8rem;
+}
+
+/* SELECT AND TEXTAREA */
+
+.question select,
+.question textarea {
+    width: 100%;
+    padding: 16px;
+
+    border: 1px solid #D1D5DB;
+    border-radius: 12px;
+
+    background: var(--white);
+    color: var(--navy);
+
+    font-family: inherit;
+    font-size: .95rem;
+
+    transition: .3s;
+}
+
+.question select {
+    cursor: pointer;
+}
+
+.question textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.question select:focus,
+.question textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+
+    box-shadow: 0 0 0 4px rgba(242, 140, 40, .15);
+}
+
+.question textarea::placeholder {
+    color: #999;
+}
+
+/* BUTTONS */
+
+.submit {
+    width: 100%;
+    padding: 18px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: var(--orange);
+    color: var(--white);
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit:hover {
+    background: #E47A19;
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(242, 140, 40, .25);
+}
+
+/* BACK BUTTON */
+
+.btn-start {
+    display: none;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.start {
+    width: 50%;
+}
+
+/* SUCCESS MESSAGE */
+
+#success {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#success h2 {
+    color: var(--blue);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#success p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    margin-top: 35px;
+    padding-top: 25px;
+
+    border-top: 1px solid #EEEEEE;
+
+    color: #888;
+    font-size: .85rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    .container {
+        padding: 30px 22px;
+    }
+
+    .container img {
+        bottom: 16px;
+        right: 10px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .question h3 {
+        font-size: 1rem;
+    }
+
+    .rating {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .rating button {
+        height: 45px;
+    }
+
+    .labels {
+        font-size: .7rem;
+    }
+
+    #success h2 {
+        font-size: 1.6rem;
+    }
+
+    .start {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .container {
+        padding: 25px 16px;
+    }
+
+    .header h1 {
+        font-size: 1.7rem;
+    }
+
+    .rating {
+        gap: 6px;
+    }
+
+    .rating button {
+        height: 42px;
+        font-size: .9rem;
+    }
+}

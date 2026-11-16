@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pesquisa de Satisfação - NPS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="./assets/img/logo-h4.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LOGO -->
+        <img src="./assets/img/logo-h4.png" alt="H4 Solutions">
+
+        <!-- CABEÇALHO -->
+        <div class="header" id="header">
+            <h1>Sua opinião importa!</h1>
+
+            <p>
+                Queremos entender sua experiência
+                e melhorar continuamente nossos serviços.
+            </p>
+        </div>
+
+        <!-- FORMULÁRIO NPS -->
+        <form id="npsForm">
+
+            <div class="question">
+                <h3>
+                    1. De 0 a 10, quanto você recomendaria
+                    nossa empresa?
+                </h3>
+
+                <div class="rating" id="rating">
+                    <!-- Notas geradas pelo JavaScript -->
+                </div>
+
+                <div class="labels">
+                    <span>Nada provável</span>
+                    <span>Muito provável</span>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>2. Qual o principal motivo da sua nota?</h3>
+
+                <select id="reason" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="Atendimento">Atendimento</option>
+                    <option value="Agilidade">Agilidade</option>
+                    <option value="Qualidade">Qualidade dos serviços</option>
+                    <option value="Preço">Preço e custo-benefício</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <h3>3. Gostaria de deixar algum comentário?</h3>
+
+                <textarea id="comment" placeholder="Compartilhe sua experiência..."></textarea>
+            </div>
+
+            <button type="submit" class="submit" id="submit">
+                Enviar avaliação
+            </button>
+
+        </form>
+
+        <!-- MENSAGEM DE SUCESSO -->
+        <div id="success">
+            <h2>Obrigado pela avaliação!</h2>
+            <p>Sua opinião nos ajuda a melhorar.</p>
+        </div>
+
+        <!-- BOTÃO VOLTAR AO INÍCIO -->
+        <div class="btn-start" id="btnStart">
+            <button type="button" class="submit start" id="startButton">
+                Voltar ao Início
+            </button>
+        </div>
+
+    </div>
+
+    <script src="./scripts.js"></script>
+
+</body>
+
+</html>
